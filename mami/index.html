@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sağlıklı Beslenme Merkezi</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background:#f4f8fb; /* Diğer tüm sayfalarla uyumlu soft buz mavisi arka plan */
+    color: #2c3e50;
+    scroll-behavior: smooth;
+}
+
+/* Navigasyon Çubuğu */
+nav{
+    background:#4299e0; /* Canlı ve Güven Veren Sağlık Mavisi */
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap: wrap;
+    gap: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo{
+    color:#ffffff;
+    font-size:24px;
+    font-weight:700;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+}
+
+.menu a{
+    color:#ffffff;
+    text-decoration:none;
+    margin-left:30px;
+    font-weight:600;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    opacity: 0.85;
+}
+
+.menu a:hover, .menu a.active{
+    color:#ffca28; /* Canlı sarı vurgu rengi */
+    opacity: 1;
+}
+
+/* Hero Bölümü */
+.hero{
+    height:80vh;
+    background:linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url("https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=1600");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding: 0 20px;
+}
+
+.hero-content h1{
+    font-size:52px;
+    font-weight: 800;
+    margin-bottom:20px;
+    letter-spacing: -0.5px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.hero-content p{
+    font-size:20px;
+    margin-bottom:35px;
+    font-weight: 300;
+    opacity: 0.95;
+}
+
+/* Buton */
+.btn{
+    background:#29b6f6; /* Tasarımla uyumlu açık mavi buton */
+    color:#ffffff;
+    padding:16px 40px;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:700;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(41, 182, 246, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn:hover{
+    background:#0288d1;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(2, 136, 209, 0.5);
+}
+
+/* İçerik Bölümü */
+.section{
+    padding:90px 8%;
+}
+
+.section h2{
+    text-align:center;
+    color:#4299e0;
+    margin-bottom:50px;
+    font-size:32px;
+    font-weight: 700;
+    position: relative;
+}
+
+/* Başlık altı estetik çizgi */
+.section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #4299e0;
+    margin: 15px auto 0 auto;
+    border-radius: 2px;
+}
+
+/* Kartlar Alanı */
+.cards{
+    display:flex;
+    gap:30px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.card{
+    background:white;
+    width: 100%;
+    max-width:340px; /* Mobil uyumlu esnek genişlik */
+    border-radius:20px; /* Modern oval köşeler */
+    overflow:hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04); /* Yumuşak premium gölge */
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow: 0 20px 40px rgba(66, 153, 224, 0.15); /* Mavi tona uygun gölge */
+}
+
+.card img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+    transition: transform 0.5s ease;
+}
+
+.card:hover img {
+    transform: scale(1.03); /* Hafif görsel yakınlaşma efekti */
+}
+
+.card-content{
+    padding:25px;
+    background: #ffffff;
+}
+
+.card-content h3{
+    color:#4299e0;
+    margin-bottom:12px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.card-content p{
+    color: #607d8b; /* Soft vizon-gri metin rengi */
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Footer */
+footer{
+    background:#4299e0;
+    color:#ffffff;
+    text-align:center;
+    padding:35px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+</style>
+</head>
+
+<body>
+
+<!-- Üst Menü -->
+<nav>
+    <a href="index.html" class="logo">🥗 Beslenme Merkezi</a>
+    <div class="menu">
+        <a href="index.html" class="active">Ana Sayfa</a>
+        <a href="besinler.html">Besinler</a>
+        <a href="diyet.html">Diyet Önerileri</a>
+        <a href="iletisim.html">İletişim</a>
+    </div>
+</nav>
+
+<!-- Hero Karşılama Alanı -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Sağlıklı Beslen, Sağlıklı Yaşa</h1>
+        <p>Doğru beslenme ile daha enerjik ve mutlu bir yaşam.</p>
+        <a href="besinler.html" class="btn">Keşfet</a>
+    </div>
+</section>
+
+<!-- Bilgi ve Öne Çıkan Etkiler Bölümü (3 Güncel Kart Düzeni) -->
+<section class="section">
+    <h2>Sağlıklı Beslenmenin Mucizevi Etkileri</h2>
+
+    <div class="cards">
+
+        <!-- KART 1: ENERJİ -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=800" alt="Yüksek Enerji">
+            <div class="card-content">
+                <h3>⚡ Kesintisiz Enerji</h3>
+                <p>İşlenmiş şekerler yerine kompleks karbonhidratlar tüketerek gün içindeki ani yorgunluk ve çökmelerin önüne geçin.</p>
+            </div>
+        </div>
+
+        <!-- KART 2: SİNDİRİM VE BAĞIRSAK -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800" alt="Sindirim Sistemi">
+            <div class="card-content">
+                <h3>🌱 Mikrobiyom Sağlığı</h3>
+                <p>Lifli gıdalar ve fermente besinler, ikinci beynimiz olan bağırsaklarımızı korur, sindirimi rahatlatır ve şişkinliği azaltır.</p>
+            </div>
+        </div>
+
+        <!-- KART 3: ZİHİNSEL ODAK -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800" alt="Zihinsel Odak">
+            <div class="card-content">
+                <h3>🧠 Zihinsel Netlik</h3>
+                <p>Omega-3 and antioksidan zengini besinler, beyin fonksiyonlarını optimize ederek odaklanma sürenizi ve hafızanızı güçlendirir.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Alt Bilgi (Footer) -->
+<footer>
+    <p>© 2026 Sağlıklı Beslenme Merkezi | Web Tasarım Projesi</p>
+</footer>
+
+</body>
+</html>

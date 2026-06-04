@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Besinler - Sağlıklı Beslenme Merkezi</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background:#f4f8fb; /* Ana sayfa ile uyumlu soft buz mavisi */
+    color: #2c3e50;
+    scroll-behavior: smooth;
+}
+
+/* Navigasyon Çubuğu */
+nav{
+    background:#4299e0; /* Ana sayfa ile aynı canlı mavi */
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap: wrap;
+    gap: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo{
+    color:#ffffff;
+    font-size:24px;
+    font-weight:700;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+}
+
+.menu a{
+    color:#ffffff;
+    text-decoration:none;
+    margin-left:30px;
+    font-weight:600;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    opacity: 0.85;
+}
+
+.menu a:hover, .menu a.active{
+    color:#ffca28; /* Aktif sayfa ve hover için sarı tonu */
+    opacity: 1;
+}
+
+/* Başlıklar */
+h1{
+    text-align:center;
+    color:#4299e0;
+    margin:50px 20px 20px 20px;
+    font-size:32px;
+    font-weight: 700;
+    position: relative;
+}
+
+h1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #4299e0;
+    margin: 15px auto 0 auto;
+    border-radius: 2px;
+}
+
+h2.section-title {
+    text-align: center;
+    color: #4299e0;
+    margin: 60px 20px 30px 20px;
+    font-size: 28px;
+}
+
+/* Kart Konteyner Alanı */
+.container{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+    padding:20px 8% 40px 8%;
+}
+
+/* Kart Tasarımları */
+.card{
+    background:white;
+    width: 100%;
+    max-width:300px;
+    border-radius:20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    padding:30px 25px;
+    text-align:center;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow: 0 20px 40px rgba(66, 153, 224, 0.15);
+}
+
+.card .icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.card h2{
+    color:#4299e0;
+    font-size: 22px;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.card p{
+    color: #607d8b;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Tablo Alanı Tasarımı */
+.table-container {
+    max-width: 950px;
+    margin: 0 auto 80px auto;
+    padding: 0 20px;
+    overflow-x: auto; /* Mobilde tablonun taşmasını önler, kaydırılabilir yapar */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+th, td {
+    padding: 18px 20px;
+    text-align: left;
+}
+
+th {
+    background-color: #4299e0;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+}
+
+tr {
+    border-bottom: 1px solid #edf2f7;
+    transition: background 0.2s ease;
+}
+
+tr:last-child {
+    border-bottom: none;
+}
+
+tr:hover {
+    background-color: #f8fafc; /* Satırın üzerine gelince hafif renk değişimi */
+}
+
+td {
+    color: #4a5568;
+    font-size: 15px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.tag-high { background: #e3f2fd; color: #0d47a1; }
+.tag-med { background: #e8f5e9; color: #1b5e20; }
+
+/* Footer */
+footer{
+    background:#4299e0;
+    color:#ffffff;
+    text-align:center;
+    padding:35px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html" class="logo">🥗 Beslenme Merkezi</a>
+    <div class="menu">
+        <a href="index.html">Ana Sayfa</a>
+        <a href="besinler.html" class="active">Besinler</a>
+        <a href="diyet.html">Diyet Önerileri</a>
+        <a href="iletisim.html">İletişim</a>
+    </div>
+</nav>
+
+<h1>Genişletilmiş Besin Grupları</h1>
+
+<div class="container">
+
+    <div class="card">
+        <span class="icon">🍎</span>
+        <h2>Meyveler</h2>
+        <p>Antioksidan, vitamin ve mineral bakımından zengindir. Hücre yenilenmesini destekler.</p>
+    </div>
+
+    <div class="card">
+        <span class="icon">🥦</span>
+        <h2>Sebzeler</h2>
+        <p>Yüksek lif içerikleri sayesinde sindirim sistemini korur ve uzun süre tokluk sağlar.</p>
+    </div>
+
+    <div class="card">
+        <span class="icon">🥛</span>
+        <h2>Süt Ürünleri</h2>
+        <p>Kalsiyum, protein ve B12 vitamini kaynağıdır. Kemik ve diş sağlığı için kritik öneme sahiptir.</p>
+    </div>
+
+    <div class="card">
+        <span class="icon">🌾</span>
+        <h2>Tahıllar</h2>
+        <p>Vücudun birincil enerji kaynağıdır. Tam tahıllar metabolizmayı düzenlemeye yardımcı olur.</p>
+    </div>
+
+    <div class="card">
+        <span class="icon">🥩</span>
+        <h2>Proteinler</h2>
+        <p>Kas yapımı ve onarımı için gereklidir. Kırmızı et, beyaz et ve yumurta yüksek oranda barındırır.</p>
+    </div>
+
+    <div class="card">
+        <span class="icon">🥑</span>
+        <h2>Sağlıklı Yağlar</h2>
+        <p>Zeytinyağı, avokado ve kuruyemişler gibi kalbi koruyan ve beyin fonksiyonlarını güçlendiren yağlar.</p>
+    </div>
+
+</div>
+
+<h2 class="section-title">📊 Temel Besin Ögeleri ve Tüketim Tablosu</h2>
+
+<div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th>Besin Grubu</th>
+                <th>En Zengin Kaynaklar</th>
+                <th>Önerilen Günlük Miktar</th>
+                <th>Temel Faydası</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><b>Sebze & Meyve</b></td>
+                <td>Ispanak, Portakal, Brokoli, Çilek</td>
+                <td>4 - 5 Porsiyon</td>
+                <td><span class="tag tag-high">Bağışıklık Gücü</span></td>
+            </tr>
+            <tr>
+                <td><b>Kaliteli Protein</b></td>
+                <td>Tavuk Göğsü, Yumurta, Mercimek, Somon</td>
+                <td>Kilo başına ~1-1.2g</td>
+                <td><span class="tag tag-high">Kas ve Hücre Onarımı</span></td>
+            </tr>
+            <tr>
+                <td><b>Kompleks Karbonhidrat</b></td>
+                <td>Yulaf, Esmer Pirinç, Kara Buğday</td>
+                <td>Enerji ihtiyacına göre değişir</td>
+                <td><span class="tag tag-med">Sürdürülebilir Enerji</span></td>
+            </tr>
+            <tr>
+                <td><b>Sağlıklı Yağlar</b></td>
+                <td>Sızma Zeytinyağı, Çiğ Badem, Avokado</td>
+                <td>2 - 3 Yemek Kaşığı / Ölçülü</td>
+                <td><span class="tag tag-med">Hormon ve Beyin Sağlığı</span></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<footer>
+    <p>© 2026 Sağlıklı Beslenme Merkezi | Web Tasarım Projesi</p>
+</footer>
+
+</body>
+</html>
